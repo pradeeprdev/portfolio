@@ -50,6 +50,7 @@ const Projects = () => {
                 <span className="font-semibold">Tech Stack:</span> {item.tech}
               </p>
 
+              {item.slug ?
               <button
                 onClick={() => router.push(`/project/${item.slug}`)}
                 className="mt-4 inline-flex items-center gap-2 px-6 py-2 text-sm font-semibold text-white 
@@ -58,7 +59,18 @@ const Projects = () => {
                 rounded-full transition"
               >
                 View Project
-              </button>
+              </button> :
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 px-6 py-2 text-sm font-semibold text-white 
+                         bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
+                         shadow-md hover:shadow-lg hover:scale-105 
+                         rounded-full transition-transform duration-300 ease-in-out"
+              >
+                Visit Project <HomeIcon fontSize="small" />
+              </a>}
             </div>
           </motion.div>
         ))}

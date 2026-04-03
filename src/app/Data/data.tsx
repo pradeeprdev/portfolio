@@ -89,7 +89,6 @@ export const projectItems = [
   },
   {
     name: "PulseFit",
-    slug: "pulsefit",
     category: "Gym Application",
     image: PulseFitProjectImg,
     url: "https://pulsefitbygrowthzi.vercel.app",
