@@ -28,13 +28,13 @@ export const aboutItems = [
 ]
 
 export const navItems = [
-    { name: "Home", link: "#home" },
-    { name: "About", link: "#about" },
-    { name: "Experience", link: "#resume" },
-    { name: "Services", link: "#services" },
-    { name: "Skills", link: "#skills" },
-    { name: "Projects", link: "#projects" },
-    { name: "Contact", link: "#contact" },
+  { name: "Home", type: "route", link: "/" },
+  { name: "About", type: "section", link: "#about" },
+  { name: "Experience", type: "section", link: "#resume" },
+  { name: "Services", type: "section", link: "#services" },
+  { name: "Skills", type: "section", link: "#skills" },
+  { name: "Projects", type: "section", link: "#projects" },
+  { name: "Contact", type: "section", link: "#contact" },
 ];
 
 export const resumeItems = [
@@ -72,23 +72,31 @@ export const skillItems = [
 export const totalProjects = '12';
 
 export const projectItems = [
-    {
-        name: "VK Laundry",
-        category: "Laundry Application",
-        image: VKLaundryImg, // replace with VK Laundry project image if available
-        url: "https://www.vklaundry.com",
-        description:
-        "A professional laundry and dry-cleaning service web application built with React and Tailwind. It includes sections like About Us, Services, Pricing, Testimonials, and Contact, with a clean UI for seamless user experience.",
-        tech: "React, Tailwind, Framer Motion",
-    },
-        {
-      name: "PulseFit",
-      category: "Gym Application",
-      image: PulseFitProjectImg,
-      url: 'https://pulsefitbygrowthzi.vercel.app',
-      description: "Fitness and gym tracking platform with personalized workout modules.",
-      tech: "React, Tailwind"
-    },
+  {
+    name: "VK Laundry",
+    slug: "vk-laundry",
+    category: "Laundry Application",
+    image: VKLaundryImg,
+    url: "https://www.vklaundry.com",
+    description:
+      "A modern laundry and dry-cleaning service application designed to provide a seamless, fast, and hassle-free experience for booking, tracking, and managing orders.",
+    tech: "React, Tailwind, Framer Motion",
+    images: {
+      website: "/images/vklaundry_website.png",
+      admin: "/images/vklaundry_dashboard.png",
+      app: "/images/vklaundry_app.png"
+    }
+  },
+  {
+    name: "PulseFit",
+    slug: "pulsefit",
+    category: "Gym Application",
+    image: PulseFitProjectImg,
+    url: "https://pulsefitbygrowthzi.vercel.app",
+    description:
+      "Fitness and gym tracking platform with personalized workout modules.",
+    tech: "React, Tailwind",
+  },
     {
       name: "Your Beans",
       category: "SAAS Application",

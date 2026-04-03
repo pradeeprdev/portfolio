@@ -5,8 +5,12 @@ import { projectItems } from '../Data/data'
 import HomeIcon from '@mui/icons-material/OpenInNew';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useRouter } from "next/navigation";
 
 const Projects = () => {
+
+  const router = useRouter();
+
   return (
     <div className='p-5 pt-60' id='Projects'>
       <div className='flex justify-center'>
@@ -46,18 +50,15 @@ const Projects = () => {
                 <span className="font-semibold">Tech Stack:</span> {item.tech}
               </p>
 
-              {/* Improved Visit Button */}
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => router.push(`/project/${item.slug}`)}
                 className="mt-4 inline-flex items-center gap-2 px-6 py-2 text-sm font-semibold text-white 
-                         bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
-                         shadow-md hover:shadow-lg hover:scale-105 
-                         rounded-full transition-transform duration-300 ease-in-out"
+                bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 
+                shadow-md hover:shadow-lg hover:scale-105 
+                rounded-full transition"
               >
-                Visit Project <HomeIcon fontSize="small" />
-              </a>
+                View Project
+              </button>
             </div>
           </motion.div>
         ))}

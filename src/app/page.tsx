@@ -12,24 +12,37 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <div className="bg-black text-white">
-      <div className="flex justify-center">
-        <div className="" style={{ maxWidth: '70rem' }}>
-          <Header />
-          <Hero />
-          <About />
-          <Resume />  
-          <Services />
-          <Skills />
-          <Projects />
+
+      {/* FIXED NAVBAR */}
+      <Header />
+
+      {/* MAIN CONTENT */}
+      <main className="">
+
+        {/* CENTERED SECTION */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-[70rem] px-4">
+            <Hero />
+            <About />
+            <Resume />
+            <Services />
+            <Skills />
+            <Projects />
+          </div>
         </div>
-      </div>
+
+        {/* FULL WIDTH SECTION */}
         <Highlights />
-      <div className="flex justify-center">
-        <div className="" style={{ maxWidth: '70rem' }}>
-          <Contact />
-          <Footer />
+
+        {/* CONTACT + FOOTER */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-[70rem] px-4">
+            <Contact />
+            <Footer />
+          </div>
         </div>
-      </div>
+
+      </main>
     </div>
   );
 }

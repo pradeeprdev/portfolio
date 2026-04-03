@@ -9,6 +9,11 @@
   --secondary-text-color: rgb(162, 162, 162);
 }
 
+body {
+  background-color: black;
+  color: white;
+}
+
 .primary-color {
   color: var(--primary-color);
 }
